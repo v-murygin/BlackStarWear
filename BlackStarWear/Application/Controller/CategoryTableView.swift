@@ -21,8 +21,7 @@ class CategoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        CategoryLoader().loadJSONE { сategoryData in
+        CategoryLoader().loadJsoneCategory { сategoryData in
             self.categoryShop = сategoryData
             self.tableViewCategory.reloadData()
         }
@@ -36,7 +35,6 @@ extension CategoryTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoryShop.count
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,34 +48,25 @@ extension CategoryTableViewController {
         let imageFullUrl = "\(imageUrlString)\(image)"
         cell.categoryImage.image = imagUrlToImage(imageUrl: imageFullUrl)
         return cell
-        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
         self.selectedSubcategories = self.categoryShop[indexPath.row]["subcategories"] as! NSArray
-
-           performSegue(withIdentifier: "subcategories", sender: selectedSubcategories)
-    
-        
+        performSegue(withIdentifier: "subcategories", sender: selectedSubcategories)
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             guard segue.identifier == "subcategories" else { return }
             guard let destination = segue.destination as? SubcategoriesTableViewController else { return }
             destination.subcategoryShop = selectedSubcategories
-
     }
-
     
     func imagUrlToImage (imageUrl:String)-> UIImage? {
         let imageUrl = URL(string: imageUrl)!
         let imageData = try! Data(contentsOf: imageUrl)
         return UIImage(data: imageData)
     }
-    
 }
 
 

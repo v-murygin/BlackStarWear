@@ -10,17 +10,12 @@ import Foundation
 import Alamofire
 
 
-let shop_url = "http://blackstarshop.ru/index.php?route=api/v1/categories"
-
-let itemID = ""
-let item_url = "http://blackstarshop.ru/index.php?route=api/v1/products&cat_id=\(itemID)"
-
-
 class CategoryLoader {
     
     
-    func loadJSONE (completion: @escaping ([NSDictionary]) -> Void)  {
+    func loadJsoneCategory (completion: @escaping ([NSDictionary]) -> Void)  {
         
+        let shop_url = "http://blackstarshop.ru/index.php?route=api/v1/categories"
         
         _ =  AF.request(shop_url).responseJSON
         { response in
@@ -48,6 +43,32 @@ class CategoryLoader {
         }
     }
     
+    
+    func loadJsoneItem (itemID: String, completion: @escaping ([ItemData]) -> Void)  {
+            
+        let itemID = itemID
+        let item_url = "http://blackstarshop.ru/index.php?route=api/v1/products&cat_id=\(itemID)"
+        
+            _ =  AF.request(item_url).responseJSON
+            { response in
+                if let objects = try? response.result.get(), let jsonDict = objects as? NSDictionary
+                {
+                    
+                    let dictionaryList = jsonDict
+                    var itemData : [ItemData] = []
+                    
+                    for (_ , item) in dictionaryList {
+                        if let currentData = ItemData(data: item as! NSDictionary){
+                            itemData.append(currentData)
+                        }
+                    }
+                    
+                    DispatchQueue.main.async {
+                        completion(itemData)
+                    }
+                }
+            }
+        }
     
 }
 

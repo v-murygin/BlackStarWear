@@ -11,15 +11,17 @@ import UIKit
 
 
 class SubcategoriesTableViewController: UITableViewController  {
-   
+    
     var subcategoryShop: NSArray = []
+    var category_ID: String = ""
+    
     @IBOutlet var tabelViewSubcategory: UITableView!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabelViewSubcategory.reloadData()
-
+        
     }
 }
 
@@ -29,21 +31,33 @@ extension SubcategoriesTableViewController {
         return subcategoryShop.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubcategoriesCell", for: indexPath) as! CategoryCell
         
         let subcategory = subcategoryShop[indexPath.row] as! NSDictionary
-       let name = subcategory["name"] as! String
+        let name = subcategory["name"] as! String
         cell.categoryName.text = name
         
         let image = subcategory["iconImage"] as! String
         let imageFullUrl = "\(CategoryTableViewController().imageUrlString)\(image)"
         cell.categoryImage.image = CategoryTableViewController().imagUrlToImage(imageUrl: imageFullUrl)
-
+        
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let goods = self.subcategoryShop[indexPath.row] as! NSDictionary
+        let id = goods["id"] as! String
+        self.category_ID = String(id)
+        performSegue(withIdentifier: "goodsList", sender: category_ID)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "goodsList" else { return }
+        guard let destination = segue.destination as? ProductLictController else { return }
+        destination.categoryID = category_ID
+        
+    }
 }
-
-
