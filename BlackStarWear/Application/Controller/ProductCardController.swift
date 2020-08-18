@@ -18,13 +18,17 @@ class ProductCardController: UIViewController {
     @IBOutlet var itemImage: UIImageView!
     
     var product = ItemData(data: [:])
+    var itemCard: [ItemData] = []
+    var similarItem: [ItemData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addDateInUI()
         addToCart.layer.cornerRadius = 10
-        }
+        similarItem = similarProducts(article: product!.article)
         
+    }
+    
     func addDateInUI() {
         
         let priseFormated = Int(Double(product!.price)!)
@@ -35,7 +39,6 @@ class ProductCardController: UIViewController {
         let imageFullUrl = "https://blackstarshop.ru/\(img)"
         itemImage.image = imagUrlToImage(imageUrl: imageFullUrl)
         
-
     }
     
     func imagUrlToImage (imageUrl:String)-> UIImage? {
@@ -44,7 +47,28 @@ class ProductCardController: UIViewController {
         return UIImage(data: imageData)
     }
     
+    func similarProducts(article: String) -> [ItemData] {
+        let article = article
+        var similarProducts: [ItemData] = []
+        for index in 0..<itemCard.count {
+            if article == itemCard[index].article {
+                similarProducts.append(itemCard[index])
+            }
+        }
+        return similarProducts
+    }
+    
     @IBAction func addToCartAction(_ sender: Any) {
+        
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVCid") as! PopUpViewController
+        
+        popUpVC.item = self.similarItem
+        self.addChild(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParent: self)
+    
+        
     }
 }
-    
+

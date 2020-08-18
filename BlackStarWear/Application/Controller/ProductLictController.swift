@@ -54,6 +54,7 @@ extension ProductLictController: UICollectionViewDelegateFlowLayout {
         guard let destination = segue.destination as? ProductCardController else { return }
         let productSelect = itemData[self.index]
         destination.product = productSelect
+        destination.itemCard = itemData
     } 
     
 }

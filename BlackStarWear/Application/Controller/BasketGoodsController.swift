@@ -9,6 +9,28 @@
 import Foundation
 import  UIKit
 
+
+
+
 class BasketGoodsController: UIViewController {
+    let shoppingList: [ItemData] = []
+    
+    
+}
+
+extension BasketGoodsController : UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return shoppingList.count
+        
+    }
+
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       let cell = tableView.dequeueReusableCell(withIdentifier: "BasketCell", for: indexPath) as! BasketCell
+        
+        
+        return  cell
+    }
     
 }

@@ -18,6 +18,7 @@ class ItemData {
     var price = ""
     var colorName = ""
     var colorImageURL = ""
+    var article = ""
     var offers: NSArray = []
     var productImages: NSArray = []
        
@@ -29,8 +30,9 @@ class ItemData {
             let description = data["description"] as? String,
             let mainImage = data["mainImage"] as? String,
             let price = data["price"] as? String,
-           let colorName = data["colorName"]  as? String,
-           let colorImageURL = data["colorImageURL"]  as? String,
+            let colorName = data["colorName"]  as? String,
+            let colorImageURL = data["colorImageURL"]  as? String,
+            let article = data["article"] as? String,
             let productImages = data["productImages"] as? NSArray,
             let offers = data["offers"] as? NSArray
             else {
@@ -46,8 +48,8 @@ class ItemData {
         self.colorImageURL = colorImageURL
         self.colorName = colorName
         self.productImages = productImages
+        self.article = article
         
     }
-    
-    
+
 }
