@@ -12,11 +12,10 @@ import UIKit
 
 class SubcategoriesTableViewController: UITableViewController  {
     
-    var subcategoryShop: NSArray = []
-    var category_ID: String = ""
-    
     @IBOutlet var tabelViewSubcategory: UITableView!
     
+    var subcategoryShop: NSArray = []
+    var category_ID: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

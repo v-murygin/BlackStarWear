@@ -10,6 +10,9 @@
 		868085DA24E80D8900C2B15D /* ProductLictController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868085D924E80D8900C2B15D /* ProductLictController.swift */; };
 		868085E024EAD6EF00C2B15D /* ItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868085DF24EAD6EF00C2B15D /* ItemData.swift */; };
 		868085E224EADA7700C2B15D /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868085E124EADA7700C2B15D /* ItemCollectionViewCell.swift */; };
+		868085E524EBDA9700C2B15D /* ProductCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868085E424EBDA9700C2B15D /* ProductCardController.swift */; };
+		868085E724EBEFCD00C2B15D /* BasketGoodsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868085E624EBEFCD00C2B15D /* BasketGoodsController.swift */; };
+		868085E924EBF05300C2B15D /* BasketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868085E824EBF05300C2B15D /* BasketCell.swift */; };
 		868E364D24E5704900A87546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868E364C24E5704900A87546 /* AppDelegate.swift */; };
 		868E364F24E5704900A87546 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868E364E24E5704900A87546 /* SceneDelegate.swift */; };
 		868E365424E5704900A87546 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868E365224E5704900A87546 /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 		868085D924E80D8900C2B15D /* ProductLictController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLictController.swift; sourceTree = "<group>"; };
 		868085DF24EAD6EF00C2B15D /* ItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemData.swift; sourceTree = "<group>"; };
 		868085E124EADA7700C2B15D /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemCollectionViewCell.swift; path = BlackStarWear/Application/View/ItemCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		868085E424EBDA9700C2B15D /* ProductCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardController.swift; sourceTree = "<group>"; };
+		868085E624EBEFCD00C2B15D /* BasketGoodsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketGoodsController.swift; sourceTree = "<group>"; };
+		868085E824EBF05300C2B15D /* BasketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCell.swift; sourceTree = "<group>"; };
 		868E364924E5704900A87546 /* BlackStarWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackStarWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868E364C24E5704900A87546 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868E364E24E5704900A87546 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 			children = (
 				868E365224E5704900A87546 /* Main.storyboard */,
 				868E365724E5704E00A87546 /* LaunchScreen.storyboard */,
+				868085E824EBF05300C2B15D /* BasketCell.swift */,
 				868085E124EADA7700C2B15D /* ItemCollectionViewCell.swift */,
 				86928C4E24E6DE4F0080F330 /* CategoryCell.swift */,
 			);
@@ -140,6 +147,8 @@
 				86928C5024E716930080F330 /* CategoryTableView.swift */,
 				86928C5224E7DE910080F330 /* SubcategoriesTable.swift */,
 				868085D924E80D8900C2B15D /* ProductLictController.swift */,
+				868085E424EBDA9700C2B15D /* ProductCardController.swift */,
+				868085E624EBEFCD00C2B15D /* BasketGoodsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,7 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				86928C5124E716930080F330 /* CategoryTableView.swift in Sources */,
+				868085E924EBF05300C2B15D /* BasketCell.swift in Sources */,
+				868085E524EBDA9700C2B15D /* ProductCardController.swift in Sources */,
 				868E364D24E5704900A87546 /* AppDelegate.swift in Sources */,
+				868085E724EBEFCD00C2B15D /* BasketGoodsController.swift in Sources */,
 				868085E024EAD6EF00C2B15D /* ItemData.swift in Sources */,
 				868085E224EADA7700C2B15D /* ItemCollectionViewCell.swift in Sources */,
 				86928C4D24E6DCDA0080F330 /* CategoryLoader.swift in Sources */,

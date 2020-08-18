@@ -11,15 +11,16 @@ import Foundation
 
 class CategoryTableViewController: UITableViewController {
     
+    @IBOutlet var tableViewCategory: UITableView!
+    
     var categoryShop: [NSDictionary] = []
     let imageUrlString =  "https://blackstarshop.ru/"
     var selectedSubcategories: NSArray = []
     
-    @IBOutlet var tableViewCategory: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         CategoryLoader().loadJsoneCategory { сategoryData in
             self.categoryShop = сategoryData

@@ -10,9 +10,11 @@ import Foundation
 
 class ProductLictController: UICollectionViewController {
     
+    @IBOutlet var itemCollectionView: UICollectionView!
+    
     var categoryID: String = ""
     var itemData: [ItemData] = []
-    @IBOutlet var itemCollectionView: UICollectionView!
+    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +46,15 @@ extension ProductLictController: UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
-    }
+        self.index = indexPath.row
+ }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "ProductCard" else { return }
+        guard let destination = segue.destination as? ProductCardController else { return }
+        let productSelect = itemData[self.index]
+        destination.product = productSelect
+    } 
     
 }
 

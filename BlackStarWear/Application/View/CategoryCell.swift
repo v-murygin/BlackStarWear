@@ -13,5 +13,7 @@ class CategoryCell: UITableViewCell {
     @IBOutlet var categoryImage: UIImageView!
     @IBOutlet var categoryName: UILabel!
     
+//        categoryImage.layer.cornerRadius = 10
+
 
 }
