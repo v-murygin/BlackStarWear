@@ -66,6 +66,7 @@ class CategoryLoader {
                     DispatchQueue.main.async {
                         completion(itemData)
                     }
+
                 }
             }
         }

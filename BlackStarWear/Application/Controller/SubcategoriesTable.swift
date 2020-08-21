@@ -38,9 +38,9 @@ extension SubcategoriesTableViewController {
         let name = subcategory["name"] as! String
         cell.categoryName.text = name
         
-        let image = subcategory["iconImage"] as! String
-        let imageFullUrl = "\(CategoryTableViewController().imageUrlString)\(image)"
-        cell.categoryImage.image = CategoryTableViewController().imagUrlToImage(imageUrl: imageFullUrl)
+//        let image = subcategory["iconImage"] as! String
+//        let imageFullUrl = "\(CategoryTableViewController().imageUrlString)\(image)"
+//        cell.categoryImage.image = CategoryTableViewController().imagUrlToImage(imageUrl: imageFullUrl)
         
         return cell
     }

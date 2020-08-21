@@ -47,6 +47,7 @@ extension ProductLictController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.index = indexPath.row
+        self.performSegue(withIdentifier: "ProductCard", sender: self)
  }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,7 +56,7 @@ extension ProductLictController: UICollectionViewDelegateFlowLayout {
         let productSelect = itemData[self.index]
         destination.product = productSelect
         destination.itemCard = itemData
-    } 
+    }
     
 }
 

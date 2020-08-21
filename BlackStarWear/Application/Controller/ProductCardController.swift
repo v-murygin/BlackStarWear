@@ -13,7 +13,7 @@ class ProductCardController: UIViewController {
     
     @IBOutlet var itemName: UILabel!
     @IBOutlet var itemPrice: UILabel!
-    @IBOutlet var itemDescription: UITextView!
+    @IBOutlet var itemDescription: UILabel!
     @IBOutlet var addToCart: UIButton!
     @IBOutlet var itemImage: UIImageView!
     
