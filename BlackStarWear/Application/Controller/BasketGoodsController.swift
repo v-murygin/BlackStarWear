@@ -44,15 +44,15 @@ extension BasketGoodsController : UITableViewDelegate, UITableViewDataSource{
     }
     
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> UITableViewRowAction? {
-          
-        let deleteAction = UITableViewRowAction(style: .default, title: "Удалить"){ _,_  in
-            ItemForBasketCard.shared.item.remove(at: indexPath.row)
-               self.shopingTableView.reloadData()
-           }
-
-           return deleteAction
-       }
+//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> UITableViewRowAction? {
+//          
+//        let deleteAction = UITableViewRowAction(style: .default, title: "Удалить"){ _,_  in
+//            ItemForBasketCard.shared.item.remove(at: indexPath.row)
+//               self.shopingTableView.reloadData()
+//           }
+//
+//           return deleteAction
+//       }
     
     func updArray(){
         shopingList = ItemForBasketCard.shared.item
