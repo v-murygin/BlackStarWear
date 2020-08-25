@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Subcategories Table View Controller-->
+        <!--Подкатегории-->
         <scene sceneID="8qU-TV-P4M">
             <objects>
                 <tableViewController id="WBC-mT-I0i" customClass="SubcategoriesTableViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                             <outlet property="delegate" destination="WBC-mT-I0i" id="0yp-ce-pEt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7YF-pt-cXO"/>
+                    <navigationItem key="navigationItem" title="Подкатегории" id="7YF-pt-cXO"/>
                     <connections>
                         <outlet property="tabelViewSubcategory" destination="1Nc-X9-42L" id="QPl-5E-QDg"/>
                         <segue destination="vn5-zT-QPs" kind="show" identifier="goodsList" id="4EC-gg-RWV"/>
@@ -72,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="4294.202898550725" y="117.39130434782609"/>
         </scene>
-        <!--Product Lict Controller-->
+        <!--Товары-->
         <scene sceneID="hjx-UZ-k9W">
             <objects>
                 <collectionViewController id="vn5-zT-QPs" customClass="ProductLictController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
@@ -143,7 +143,7 @@
                             <outlet property="delegate" destination="vn5-zT-QPs" id="JtS-qj-chm"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Fo2-Vd-puC"/>
+                    <navigationItem key="navigationItem" title="Товары" id="Fo2-Vd-puC"/>
                     <connections>
                         <outlet property="itemCollectionView" destination="DF9-yt-sF7" id="VRj-X1-b4P"/>
                         <segue destination="yf5-kt-KDS" kind="push" identifier="ProductCard" id="6Zf-Ou-BRb"/>
@@ -460,7 +460,7 @@
         <scene sceneID="oUm-y8-rPf">
             <objects>
                 <tableViewController title="WelcomeCategory" id="HRd-3p-UDA" customClass="CategoryTableViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Hm-JN-0ku">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Hm-JN-0ku">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -507,7 +507,7 @@
                             <outlet property="delegate" destination="HRd-3p-UDA" id="1bJ-d8-D6e"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="s3P-0N-W9k"/>
+                    <navigationItem key="navigationItem" title="Категории" id="s3P-0N-W9k"/>
                     <connections>
                         <outlet property="tableViewCategory" destination="7Hm-JN-0ku" id="eEf-TJ-SDX"/>
                         <segue destination="WBC-mT-I0i" kind="show" identifier="subcategories" id="0E6-JC-Ink"/>
@@ -526,7 +526,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GKT-0p-W7K">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="546.66666666666663"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="547"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationWidth="10" reuseIdentifier="BasketCell" rowHeight="70" id="EQy-w8-xMI" customClass="BasketCell" customModule="BlackStarWear" customModuleProvider="target">
@@ -618,12 +618,18 @@
                                 <rect key="frame" x="0.0" y="587" width="414" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFn-9W-qSx">
-                                        <rect key="frame" x="10" y="32" width="394" height="36"/>
+                                        <rect key="frame" x="10" y="25" width="394" height="50"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="alS-Xq-0Vj"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Оформить заказ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendOrder:" destination="Knl-V3-qxO" eventType="touchUpInside" id="ZVJ-1v-7dh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -635,16 +641,23 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6k0-5w-1hy">
-                                <rect key="frame" x="0.0" y="546.66666666666663" width="414" height="40.333333333333371"/>
+                                <rect key="frame" x="0.0" y="547" width="414" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итого:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KU2-pP-fCM">
-                                        <rect key="frame" x="10" y="9.9999999999999982" width="52" height="20.333333333333329"/>
+                                        <rect key="frame" x="10" y="10" width="52" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="Mks-Cm-Md2"/>
+                                            <constraint firstAttribute="height" constant="20" id="dzT-FX-Hov"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000 руб." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NC3-8n-jAv">
-                                        <rect key="frame" x="325.66666666666669" y="9.9999999999999982" width="78.333333333333314" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000 руб." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NC3-8n-jAv">
+                                        <rect key="frame" x="72" y="10" width="332" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="E0s-P9-S57"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -658,6 +671,7 @@
                                     <constraint firstAttribute="bottom" secondItem="KU2-pP-fCM" secondAttribute="bottom" constant="10" id="OzY-z0-det"/>
                                     <constraint firstAttribute="bottom" secondItem="NC3-8n-jAv" secondAttribute="bottom" constant="10" id="PGV-X3-6rJ"/>
                                     <constraint firstAttribute="trailing" secondItem="NC3-8n-jAv" secondAttribute="trailing" constant="10" id="gIB-vn-3jU"/>
+                                    <constraint firstItem="NC3-8n-jAv" firstAttribute="leading" secondItem="KU2-pP-fCM" secondAttribute="trailing" constant="10" id="zMz-ja-bhh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -679,8 +693,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Корзина" image="bag" catalog="system" id="p8r-fb-u1J"/>
                     <connections>
+                        <outlet property="sendOrderButton" destination="sFn-9W-qSx" id="eu8-WT-mUB"/>
                         <outlet property="shopingTableView" destination="GKT-0p-W7K" id="Ciy-mc-qpD"/>
                         <outlet property="totalPriceLabel" destination="NC3-8n-jAv" id="qHb-1t-Djn"/>
+                        <outlet property="totalView" destination="6k0-5w-1hy" id="5hK-9W-GbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I67-pi-6F5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

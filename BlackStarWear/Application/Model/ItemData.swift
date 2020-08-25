@@ -33,8 +33,9 @@ class ItemData {
             let colorName = data["colorName"]  as? String,
             let colorImageURL = data["colorImageURL"]  as? String,
             let article = data["article"] as? String,
-            let productImages = data["productImages"] as? NSArray,
-            let offers = data["offers"] as? NSArray
+            let offers = data["offers"] as? NSArray,
+            offers.count >  0,
+            let productImages = data["productImages"] as? NSArray
             else {
                 return nil
         }

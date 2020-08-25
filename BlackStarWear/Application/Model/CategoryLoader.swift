@@ -8,13 +8,13 @@
 
 import Foundation
 import Alamofire
-
+import SVProgressHUD
 
 class CategoryLoader {
     
     
     func loadJsoneCategory (completion: @escaping ([NSDictionary]) -> Void)  {
-        
+        SVProgressHUD.show()
         let shop_url = "http://blackstarshop.ru/index.php?route=api/v1/categories"
         
         _ =  AF.request(shop_url).responseJSON
@@ -30,22 +30,20 @@ class CategoryLoader {
                 сategoryData.append(jsonDict["73"] as! NSDictionary )
                 сategoryData.append(jsonDict["156"] as! NSDictionary )
                 сategoryData.append(jsonDict["165"] as! NSDictionary )
-                
-//                сategoryData.append(jsonDict["123"] as! NSDictionary )
-//                сategoryData.append(jsonDict["74"] as! NSDictionary )
-//                сategoryData.append(jsonDict["323"] as! NSDictionary )
-               
+
                 DispatchQueue.main.async {
                     completion(сategoryData)
+                    SVProgressHUD.dismiss()
                 }
-
             }
         }
+
     }
     
     
     func loadJsoneItem (itemID: String, completion: @escaping ([ItemData]) -> Void)  {
-            
+                
+        SVProgressHUD.show()
         let itemID = itemID
         let item_url = "http://blackstarshop.ru/index.php?route=api/v1/products&cat_id=\(itemID)"
         
@@ -65,6 +63,7 @@ class CategoryLoader {
                     
                     DispatchQueue.main.async {
                         completion(itemData)
+                        SVProgressHUD.dismiss()
                     }
 
                 }

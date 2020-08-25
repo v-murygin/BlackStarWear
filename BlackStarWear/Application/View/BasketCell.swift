@@ -17,6 +17,7 @@ class BasketCell: UITableViewCell {
     @IBOutlet var priceBasketCell: UILabel!
     
     
+    
     func itemCell(item: BasketCard) {
         
         let imageFullUrl = "https://blackstarshop.ru/\(item.mainImage)"

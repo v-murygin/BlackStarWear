@@ -26,7 +26,7 @@ class ProductCardController: UIViewController {
         addDateInUI()
         addToCart.layer.cornerRadius = 10
         similarItem = similarProducts(article: product!.article)
-        
+
     }
     
     func addDateInUI() {

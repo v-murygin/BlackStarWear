@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 
+
 class ProductLictController: UICollectionViewController {
     
     @IBOutlet var itemCollectionView: UICollectionView!
@@ -18,7 +19,6 @@ class ProductLictController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         CategoryLoader().loadJsoneItem(itemID: categoryID) { itemData in
             self.itemData = itemData
             self.itemCollectionView.reloadData()

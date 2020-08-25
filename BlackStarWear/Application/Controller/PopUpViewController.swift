@@ -15,7 +15,6 @@ class PopUpViewController: UIViewController {
     @IBOutlet var colorTable: UITableView!
     @IBOutlet var sizeTable: UITableView!
     
-    
     var item: [ItemData] = []
     var indexColor = 0
     var indexSize = 0
@@ -25,7 +24,6 @@ class PopUpViewController: UIViewController {
     var arraySelectedColorItem: NSDictionary = [:]
     var selectedSize = ""
     var basket: BasketCard? = nil
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +34,10 @@ class PopUpViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-                self.tabBarController?.tabBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     @IBAction func chooseButtonAction(_ sender: Any) {
-        
         
         basket = BasketCard(data: item[indexColor], sizeSelect: selectedSize, colorSelect: colorSelect, indexSize: indexSize)
         
@@ -50,16 +47,10 @@ class PopUpViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             
         } else {
-            
-
-        ItemForBasketCard.shared.item.append(basket!)
-        self.view.removeFromSuperview()
-            
+            ItemForBasketCard.shared.item.append(basket!)
+            self.view.removeFromSuperview()
         }
     }
-    
-
-    
 }
 
 extension PopUpViewController: UITableViewDataSource, UITableViewDelegate  {
@@ -70,8 +61,8 @@ extension PopUpViewController: UITableViewDataSource, UITableViewDelegate  {
             self.rowCount =  item.count
         }
         if (tableView == self.sizeTable) {
-             if indexColor == 0 {
-                self.rowCount = 1
+            if indexColor == 0 {
+                self.rowCount = item[0].offers.count
             }
         }
         
@@ -90,14 +81,17 @@ extension PopUpViewController: UITableViewDataSource, UITableViewDelegate  {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SizeCell", for: indexPath) as! ProductSizeCell
             
             if indexColor == 0 {
-                cell.sizeLabel.text = ""
-          
+                
+                let labelArray = item[0].offers[indexPath.row] as! NSDictionary
+                let labelText = labelArray["size"] as! String
+                cell.sizeLabel.text = labelText
+                
             } else {
                 indexSize = indexPath.row
                 let labelArray = sizeDictionary[indexPath.row] as! NSDictionary
                 let labelText = labelArray["size"] as! String
                 cell.sizeLabel.text = labelText
-
+                
             }
             return cell
         }
@@ -120,7 +114,4 @@ extension PopUpViewController: UITableViewDataSource, UITableViewDelegate  {
             
         }
     }
-    
-
-    
 }
