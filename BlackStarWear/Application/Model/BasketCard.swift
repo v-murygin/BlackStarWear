@@ -10,8 +10,10 @@ import Foundation
 
 
 class ItemForBasketCard {
+    
   static let shared = ItemForBasketCard()
-  var item: [BasketCard] = []
+    var item: [BasketCard] = []
+
 }
 
 class  BasketCard {

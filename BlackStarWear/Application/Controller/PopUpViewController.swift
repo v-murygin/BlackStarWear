@@ -103,7 +103,6 @@ extension PopUpViewController: UITableViewDataSource, UITableViewDelegate  {
             self.colorSelect = item[indexColor].colorName
             self.rowCount =  item[indexColor].offers.count
             self.sizeDictionary = item[indexColor].offers
-            
             self.sizeTable.reloadData()
             
         }
@@ -111,7 +110,6 @@ extension PopUpViewController: UITableViewDataSource, UITableViewDelegate  {
             
             self.arraySelectedColorItem = sizeDictionary[indexPath.row] as! NSDictionary
             self.selectedSize = arraySelectedColorItem["size"] as! String
-            
         }
     }
 }

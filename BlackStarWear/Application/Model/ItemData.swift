@@ -24,6 +24,8 @@ class ItemData {
        
     init?(data: NSDictionary) {
         
+
+        
         guard
             let name = data["name"] as? String,
             let englishName = data["englishName"] as? String,
@@ -34,7 +36,7 @@ class ItemData {
             let colorImageURL = data["colorImageURL"]  as? String,
             let article = data["article"] as? String,
             let offers = data["offers"] as? NSArray,
-            offers.count >  0,
+            offers.count !=  0,
             let productImages = data["productImages"] as? NSArray
             else {
                 return nil
