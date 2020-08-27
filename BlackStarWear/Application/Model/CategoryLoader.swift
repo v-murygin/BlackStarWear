@@ -24,12 +24,9 @@ class CategoryLoader {
                 
                 var сategoryData : [NSDictionary] = []
                 
-                сategoryData.append(jsonDict["67"] as! NSDictionary)
-                сategoryData.append(jsonDict["68"] as! NSDictionary )
-                сategoryData.append(jsonDict["69"] as! NSDictionary )
-                сategoryData.append(jsonDict["73"] as! NSDictionary )
-                сategoryData.append(jsonDict["156"] as! NSDictionary )
-                сategoryData.append(jsonDict["165"] as! NSDictionary )
+                for (_ , item) in jsonDict {
+                    сategoryData.append(item as! NSDictionary)
+                }
 
                 DispatchQueue.main.async {
                     completion(сategoryData)

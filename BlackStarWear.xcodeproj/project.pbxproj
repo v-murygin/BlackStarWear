@@ -17,6 +17,7 @@
 		868085ED24EC2D8E00C2B15D /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868085EC24EC2D8E00C2B15D /* PopUpViewController.swift */; };
 		868085EF24EC3F3800C2B15D /* ProductSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868085EE24EC3F3800C2B15D /* ProductSizeCell.swift */; };
 		868085F124EC402800C2B15D /* ProductColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868085F024EC402800C2B15D /* ProductColorCell.swift */; };
+		868085F324F7BB3500C2B15D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 868085F224F7BB3400C2B15D /* README.md */; };
 		868E364D24E5704900A87546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868E364C24E5704900A87546 /* AppDelegate.swift */; };
 		868E364F24E5704900A87546 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868E364E24E5704900A87546 /* SceneDelegate.swift */; };
 		868E365424E5704900A87546 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868E365224E5704900A87546 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		868085EC24EC2D8E00C2B15D /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopUpViewController.swift; path = BlackStarWear/Application/Controller/PopUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		868085EE24EC3F3800C2B15D /* ProductSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSizeCell.swift; sourceTree = "<group>"; };
 		868085F024EC402800C2B15D /* ProductColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductColorCell.swift; sourceTree = "<group>"; };
+		868085F224F7BB3400C2B15D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		868E364924E5704900A87546 /* BlackStarWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackStarWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868E364C24E5704900A87546 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868E364E24E5704900A87546 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		868E364024E5704900A87546 = {
 			isa = PBXGroup;
 			children = (
+				868085F224F7BB3400C2B15D /* README.md */,
 				868E364B24E5704900A87546 /* BlackStarWear */,
 				868E364A24E5704900A87546 /* Products */,
 				86928C3B24E6D67A0080F330 /* Frameworks */,
@@ -247,6 +250,7 @@
 			files = (
 				868E365924E5704E00A87546 /* LaunchScreen.storyboard in Resources */,
 				868E365624E5704E00A87546 /* Assets.xcassets in Resources */,
+				868085F324F7BB3500C2B15D /* README.md in Resources */,
 				868E365424E5704900A87546 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

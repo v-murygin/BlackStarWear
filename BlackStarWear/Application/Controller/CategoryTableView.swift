@@ -27,7 +27,6 @@ class CategoryTableViewController: UITableViewController {
             self.categoryShop = сategoryData
             self.tableViewCategory.reloadData()
         }
-
         
     }
     
@@ -70,7 +69,3 @@ extension CategoryTableViewController {
         return UIImage(data: imageData)
     }
 }
-
-
-
-
