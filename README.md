@@ -2,6 +2,18 @@
  Дипломная работа SkillBox "IOS-разработка для начинающих"
 
 
+| <img height="500" src="https://github.com/muriginvlad/BlackStarWear/raw/master/Screenshots/Screenshot1.png" /> | <img height="500" src="https://github.com/muriginvlad/BlackStarWear/raw/master/Screenshots/Screenshot2.png" /> | <img height="500" src="https://github.com/muriginvlad/BlackStarWear/raw/master/Screenshots/Screenshot3.png" /> |
+|------------|------------|------------|
+|<p align="center">Категории.</p>|<p align="center">Подкатегории</p>|<p align="center">Товары</p>|
+|------------|------------|------------|
+| <img height="500" src="https://github.com/muriginvlad/BlackStarWear/raw/master/Screenshots/Screenshot4.png" /> | <img height="500" src="https://github.com/muriginvlad/BlackStarWear/raw/master/Screenshots/Screenshot5.png" /> | <img height="500" src="https://github.com/muriginvlad/BlackStarWear/raw/master/Screenshots/Screenshot6.png" /> |
+|------------|------------|------------|
+|<p align="center">Карточка товара.</p>|<p align="center">Выбор размера и цвета</p>|<p align="center">Корзина</p>|
+
+
+
+
+
 ТЗ для дипломной работы
 ----------------
 
