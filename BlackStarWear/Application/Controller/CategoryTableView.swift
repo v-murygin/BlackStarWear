@@ -104,7 +104,6 @@ extension CategoryTableViewController {
             let goods = self.subcategoryShop[indexPath.row] as! NSDictionary
             let id = goods["id"] as! String
             self.category_ID = String(id)
-            
             self.performSegue(withIdentifier: "goodsList", sender: category_ID)
         }
         tableViewCategory.reloadData()

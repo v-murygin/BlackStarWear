@@ -460,7 +460,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="categoryName" destination="2eh-Nl-oxI" id="zRq-h1-uaN"/>
-                                    <segue destination="vn5-zT-QPs" kind="show" identifier="goodsList" destinationCreationSelector="goodsList" id="x53-4s-M1M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -480,11 +479,12 @@
                         <outlet property="allItem" destination="2to-VQ-TSh" id="KWb-eA-4RC"/>
                         <outlet property="navBar" destination="s3P-0N-W9k" id="hpA-lo-6gk"/>
                         <outlet property="tableViewCategory" destination="7Hm-JN-0ku" id="eEf-TJ-SDX"/>
+                        <segue destination="vn5-zT-QPs" kind="show" identifier="goodsList" destinationCreationSelector="goodsList" id="N7q-yn-DoN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdR-4F-uKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3468.115942028986" y="118.20652173913044"/>
+            <point key="canvasLocation" x="3564" y="118"/>
         </scene>
         <!--Корзина-->
         <scene sceneID="5UQ-OR-oer">
