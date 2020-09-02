@@ -8,12 +8,9 @@
 
 import Foundation
 
-
 class ItemForBasketCard {
-    
-  static let shared = ItemForBasketCard()
+    static let shared = ItemForBasketCard()
     var item: [BasketCard] = []
-
 }
 
 class  BasketCard {
@@ -25,7 +22,6 @@ class  BasketCard {
     var offers: NSArray = []
     var article = ""
     var size = ""
-        
     
     init?(data: ItemData, sizeSelect: String, colorSelect: String, indexSize: Int) {
         guard

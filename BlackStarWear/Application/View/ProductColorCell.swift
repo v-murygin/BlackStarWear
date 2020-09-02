@@ -11,5 +11,5 @@ import UIKit
 class ProductColorCell: UITableViewCell {
 
     @IBOutlet var colorLabel: UILabel!
-    
+
 }

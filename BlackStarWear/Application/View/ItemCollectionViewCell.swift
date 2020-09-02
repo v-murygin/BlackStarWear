@@ -15,13 +15,11 @@ class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet var itemPrice: UILabel!
     
     func itemCell(item: ItemData) {
-        
         let imageFullUrl = "https://blackstarshop.ru/\(item.mainImage)"
         itemImage.image = imagUrlToImage(imageUrl: imageFullUrl)
         itamName.text = item.name
         let priseFormated = Int(Double(item.price)!)
         itemPrice.text = "\(priseFormated) руб. "
-        
     }
     
     func imagUrlToImage (imageUrl:String)-> UIImage? {
@@ -29,5 +27,4 @@ class ItemCollectionViewCell: UICollectionViewCell {
         let imageData = try! Data(contentsOf: imageUrl)
         return UIImage(data: imageData)
     }
-    
 }

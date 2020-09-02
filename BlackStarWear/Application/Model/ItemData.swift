@@ -21,10 +21,8 @@ class ItemData {
     var article = ""
     var offers: NSArray = []
     var productImages: NSArray = []
-       
+    
     init?(data: NSDictionary) {
-        
-
         
         guard
             let name = data["name"] as? String,
@@ -54,5 +52,5 @@ class ItemData {
         self.article = article
         
     }
-
+    
 }

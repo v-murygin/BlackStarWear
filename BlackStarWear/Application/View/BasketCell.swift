@@ -9,17 +9,14 @@
 import UIKit
 
 class BasketCell: UITableViewCell {
-
+    
     @IBOutlet var imageBasketCell: UIImageView!
     @IBOutlet var nameBasketCell: UILabel!
     @IBOutlet var sizeBasketCell: UILabel!
     @IBOutlet var colorBasketCell: UILabel!
     @IBOutlet var priceBasketCell: UILabel!
     
-    
-    
-    func itemCell(item: BasketCard) {
-        
+    func itemCell(item: BasketCard) {        
         let imageFullUrl = "https://blackstarshop.ru/\(item.mainImage)"
         imageBasketCell.image = imagUrlToImage(imageUrl: imageFullUrl)
         colorBasketCell.text = "Цвет: \(item.colorName)"
@@ -27,7 +24,6 @@ class BasketCell: UITableViewCell {
         sizeBasketCell.text = "Размер: \(item.size)"
         let priseFormated = Int(Double(item.price)!)
         priceBasketCell.text = "\(priseFormated) руб."
-        
     }
     
     func imagUrlToImage (imageUrl:String)-> UIImage? {
@@ -35,5 +31,4 @@ class BasketCell: UITableViewCell {
         let imageData = try! Data(contentsOf: imageUrl)
         return UIImage(data: imageData)
     }
-    
 }

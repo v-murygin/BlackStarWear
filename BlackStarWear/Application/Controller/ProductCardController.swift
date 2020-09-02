@@ -26,7 +26,6 @@ class ProductCardController: UIViewController {
         addDateInUI()
         addToCart.layer.cornerRadius = 10
         similarItem = similarProducts(article: product!.article)
-
     }
     
     func addDateInUI() {
@@ -38,7 +37,6 @@ class ProductCardController: UIViewController {
         let img = String(product!.mainImage)
         let imageFullUrl = "https://blackstarshop.ru/\(img)"
         itemImage.image = imagUrlToImage(imageUrl: imageFullUrl)
-        
     }
     
     func imagUrlToImage (imageUrl:String)-> UIImage? {
@@ -67,8 +65,6 @@ class ProductCardController: UIViewController {
         popUpVC.view.frame = self.view.frame
         self.view.addSubview(popUpVC.view)
         popUpVC.didMove(toParent: self)
-    
-        
     }
 }
 

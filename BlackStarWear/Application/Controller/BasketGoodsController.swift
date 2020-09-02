@@ -18,7 +18,7 @@ class BasketGoodsController: UIViewController {
     
     var shopingList: [BasketCard] = []
     var shopingItem: BasketCard? = nil
-
+    
     override func  viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
         updArray()
@@ -32,16 +32,14 @@ class BasketGoodsController: UIViewController {
     }
     
     @IBAction func sendOrder(_ sender: Any) {
-    print("Спасибо за покупко, но это не настоящий магазин! ")
+        print("Спасибо за покупку, но это не настоящий магазин! ")
     }
-    
 }
 
 extension BasketGoodsController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shopingList.count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,6 +70,4 @@ extension BasketGoodsController : UITableViewDelegate, UITableViewDataSource{
         }
         self.totalPriceLabel.text = "\(priseFormated) руб."
     }
-    
-    
 }

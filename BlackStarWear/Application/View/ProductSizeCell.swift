@@ -10,6 +10,5 @@ import UIKit
 
 class ProductSizeCell: UITableViewCell {
 
-    @IBOutlet var sizeLabel: UILabel!
-    
+    @IBOutlet var sizeLabel: UILabel!    
 }
